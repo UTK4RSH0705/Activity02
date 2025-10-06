@@ -1,5 +1,4 @@
 # Activity02
-College EEL Practical 
 #include <stdio.h>
 
 int main() {
