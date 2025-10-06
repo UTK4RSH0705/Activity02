@@ -1,0 +1,47 @@
+Research:
+
+Boolean is the most basic data type in programming. It works with just two values 0 and 1 which basically mean false and true. A variable in programming is just a way to store some data using a name. So, you could have a Boolean variable called isUserLoggedIn, and it can either be true or false. Based on whether it's true or false, your program can decide what to do like show private info if the user is logged in, or block access if they’re not.
+https://www.w3schools.com/js/js_datatypes.asp https://www.geeksforgeeks.org/boolean-data-type-in-c-cpp/
+https://docs.python.org/3/library/stdtypes.html#truth
+
+
+Analyse:
+
+1. Home Automation System
+Smart homes use sensors and controllers to automate appliances.
+When a door sensor detects the door is closed (1), the system locks it.
+If the door is open (0), it might trigger an alert or turn on lights.
+
+
+ 2. Car Seat Belt Alarm
+Modern cars check if the seat belt is fastened:
+If the belt is fastened (1), the alarm is off.
+If not (0), the alarm beeps and shows a warning light.
+
+
+3. Computer Power Button
+The power button sends a signal to the motherboard:
+Pressed (1) → Turns the computer on.
+Not pressed (0) → Keep it off.
+
+
+ 4. Temperature Control System
+In an air conditioner:
+If the room temperature is above the set limit (1), the cooling turns on.
+If it's at or below the set temperature (0), the system turns off.
+
+
+Ideate:
+
+A device in which we can put the current temperature of the surrounding area . This device will help in controlling the temperature of the room by turning on the cooling system. When the room temperature reaches a certain temperature it will give the signal to the cooling system and help in controlling the temperature.
+When the temperature crosses the limit of 30 degrees celsius it will notify the cooling system.
+
+Test:
+
+The program tests whether to turn the cooling system ON or OFF based on the room temperature entered by the user.
+
+
+
+
+
+
