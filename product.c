@@ -9,15 +9,15 @@ struct product
 };
 
 int main()
-  {
-    int m, n;
+{
+    int n;
     printf("Enter number of products: ");
     scanf("%d", &n);
     printf("\n");
 
     struct product P[15];
     
-    for (m = 0; m < n; m++)
+    for (int m = 0; m < n; m++)
     {
         printf("Enter Product Name: ");
         scanf("%s", P[m].name);
@@ -27,18 +27,20 @@ int main()
 
         printf("Enter Product Price: ₹");
         scanf("%d", &P[m].price);
-        printf("\n");
 
-         printf("Enter Product Quantity: ");
+        printf("Enter Product Quantity: ");
         scanf("%d", &P[m].quantity);
+
         printf("\n");
     }
+
     
     for (int i = 0; i < n - 1; i++)
     {
         for (int j = 0; j < n - i - 1; j++)
         {
-            if (P[j].price < P[j + 1].price)
+            if (P[j].price < P[j + 1].price ||
+               (P[j].price == P[j + 1].price && P[j].quantity < P[j + 1].quantity))
             {
                 struct product temp = P[j];
                 P[j] = P[j + 1];
@@ -47,25 +49,14 @@ int main()
         }
     }
 
-        for (int i = 0; i < n - 1; i++)
-    {
-        for (int j = 0; j < n - i - 1; j++)
-        {
-            if (P[j].quantity < P[j + 1].quantity)
-            {
-                struct product temp = P[j];
-                P[j] = P[j + 1];
-                P[j + 1] = temp;
-            }
-        }
-    }
+    printf("\nThe list of the products in descending order of price\n");
+    printf("(If prices are same, sorted by quantity):\n");
+    printf("---------------------------------------------------------\n");
 
-
-    printf("\nThe list of the products in descending order of price is:\n");
-    printf("--------------------------------------------------------\n");
-    for (m = 0; m < n; m++)
+    for (int m = 0; m < n; m++)
     {
-        printf("Name: %s | ID no.: %d | Price: ₹%d | Quantity: %d \n", P[m].name, P[m].IDno, P[m].price, P[m].quantity);
+        printf("Name: %s | ID no.: %d | Price: ₹%d | Quantity: %d\n",
+               P[m].name, P[m].IDno, P[m].price, P[m].quantity);
     }
 
     return 0;
