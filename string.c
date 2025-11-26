@@ -86,7 +86,11 @@ int Compare(char a[], char b[]) {
     {
         j++;
     }
-    return 0;
+    if(i==j)
+    {
+        return 0;
+    }
+    return 1;
 }
 
 void Concatenating(char dest[], char src[]) 
@@ -105,4 +109,3 @@ void Concatenating(char dest[], char src[])
 
     dest[i] = '\0';
 }
-
